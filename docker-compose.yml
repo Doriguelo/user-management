@@ -5,7 +5,7 @@ services:
     container_name: user-api-db
     environment:
       - POSTGRES_DB=userdb
-      - POSTGRES_USER=mangovitajuice
-      - POSTGRES_PASSWORD=doriga
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
     ports:
       - "5433:5432"
