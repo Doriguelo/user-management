@@ -11,18 +11,20 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 
 class AuthorizationServiceTest {
+
     @Mock
     UserRepository userRepository;
 
     @InjectMocks
-    com.doriguelo.user_management_api.service.AuthorizationService authorizationService;
+    AuthorizationService authorizationService;
 
     @BeforeEach
-    void setup(){
+    void setup() {
         MockitoAnnotations.openMocks(this);
     }
 
